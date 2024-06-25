@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require 'vendorfile/autoload.php';
 $id=$_GET['id'];
 $mongo=new MongoDB\Client;
 $db=$mongo->newdb;
@@ -9,12 +9,12 @@ $moj=$db->newcollection->findOne(array('_id'=>$id));
 <html>
     <head>
         <title>Update</title>
-        <link rel="stylesheet" href="upd.css">
+        <link rel="stylesheet" href="update.css">
     </head>
     <body>
     <div class="container">
         <h1>Update Data</h1>
-        <form action="update1.php" method="post">
+        <form action="updatedata1.php" method="post">
             <div class="form-group">
                 <label for="ename">Ename:</label>
                 <input type="text" id="ename" name="ename" value="<?php echo $moj['ename']?>" required>

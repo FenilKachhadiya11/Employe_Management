@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require 'vendorfile/autoload.php';
 $mongo =new MongoDB\Client;
 $db=$mongo->newdb;
 $mobj=$db->newcollection->find();
@@ -7,7 +7,7 @@ $mobj=$db->newcollection->find();
 <html>
     <head>
         <title>Show</title>
-    <link rel="stylesheet" href="sow.css">
+    <link rel="stylesheet" href="show.css">
     </head>
 
     <body>
@@ -43,8 +43,8 @@ foreach($mobj as $row){
             <td><?php echo $row['email']?></td>
             <td><?php echo $row['department']?></td>
             <td><?php echo $row['address']?></td>
-            <td class="btn update-btn"><a href="update.php?id=<?php echo $row['_id'];?>">Update</a></td>
-            <td class="btn delete-btn"><a href="delete.php?id=<?php echo $row['_id'];?>">Delete</a></td>
+            <td class="btn update-btn"><a href="updatedata.php?id=<?php echo $row['_id'];?>">Update</a></td>
+            <td class="btn delete-btn"><a href="deletedata.php?id=<?php echo $row['_id'];?>">Delete</a></td>
         </tr>
     <?php
 }

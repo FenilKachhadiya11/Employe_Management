@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=h1, initial-scale=1.0">
     <title>Insert</title>
-    <link rel="stylesheet" href="ins.css">
+    <link rel="stylesheet" href="insert.css">
 </head>
 <body>
     <div class="container">
         <h1>Insert Data</h1>
-        <form action="insert.php" method="POST">
+        <form action="insertdata.php" method="POST">
             <div class="form-group">
                 <label for="ename">Ename:</label>
                 <input type="text" id="ename" name="ename" required>

@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require 'vendorfile/autoload.php';
 
 $mongo =new MongoDB\client;
 $db=$mongo->newdb;

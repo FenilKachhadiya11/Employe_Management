@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php'; //file inmort 
+require 'vendorfile/autoload.php'; //file inmort 
 
 if($_POST)
  {
@@ -17,6 +17,6 @@ if($_POST)
             'address'=>$_POST['address']
         ))
     );
-header('location:show.php');
+header('location:showdata.php');
     }
 ?>
